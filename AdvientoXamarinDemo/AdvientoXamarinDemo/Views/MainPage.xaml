@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AdvientoXamarinDemo.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{Binding Title}"
+    BackgroundColor="White">
+
+    <StackLayout>
+        <Label Text="Monto:" />
+        <Entry Keyboard="Numeric" Text="{Binding Monto, Mode=TwoWay}" />
+        <Button
+            BackgroundColor="MidnightBlue"
+            Command="{Binding CobrarCommand}"
+            Text="Cobrar"
+            TextColor="White"
+            VerticalOptions="EndAndExpand" />
+        <Label
+            FontSize="Small"
+            Text="{Binding Mensaje, Mode=TwoWay}"
+            TextColor="{Binding ColorMensaje, Mode=TwoWay}" />
+    </StackLayout>
+
+</ContentPage>
